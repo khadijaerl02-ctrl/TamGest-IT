@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <title>Liste des logiciels</title>
+    <link rel="icon" type="image/png" href="logo_TamGestIT.png">
+</head>
+
+<body>
+
+    <div class="content">
+
+        <div id="sidebar-container"></div>
+        <main class="main-content">
+
+            <section class="welcome">
+                <h1>Liste des logiciels</h1>
+                <p>Consultez et gérez les logiciels et leurs licences.</p>
+            </section>
+
+            <div class="table-card">
+
+                <div class="table-header">
+
+                    <div class="table-actions">
+
+                        <a href="logicielajout.html" class="add-btn">
+                            <i class="fa-solid fa-plus"></i>
+                            Ajouter un logiciel
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Logiciel</th>
+                            <th>Version</th>
+                            <th>Catégorie</th>
+                            <th>Éditeur</th>
+                            <th>Licences</th>
+                            <th>Date d'expiration</th>
+                            <th>Statut</th>
+                            <th>Actions</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="logicielsTable">
+
+
+                        
+                    </tbody>
+
+                </table>
+
+                <div id="emptyMessage" class="empty">
+
+                    <i class="fa-solid fa-laptop-code"></i>
+
+                    <h3>Aucun logiciel enregistré</h3>
+
+                    <p>Ajoutez votre premier logiciel.</p>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="sidebar.js"></script>
+    <script src="script.js"></script>
+    <script src="logiciels.js"></script>
+    <script src="protection.js"></script>
+
+</body>
+
+</html>

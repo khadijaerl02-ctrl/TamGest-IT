@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <title>Listes des utilisateurs</title>
+    <link rel="icon" type="image/png" href="logo_TamGestIT.png">
+</head>
+
+<body>
+    <div class="content">
+        <aside class="sidebar">
+        
+            <div class="logo">
+                <img src="logo_TamGestIT.png" alt="TamGest Logo">
+                <h2>TamGest IT</h2>
+            </div>
+        
+            <ul class="menu">
+        
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Tableau de Bord</span>
+                    </a>
+                </li>
+        
+                <li class="menu-item">
+                    <a href="#">
+                        <i class="fa-solid fa-desktop"></i>
+                        <span>Équipements</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+        
+                    <ul class="submenu">
+                        <li>
+                            <a href="equipement.html">
+                                <i class="fa-solid fa-list"></i> Liste
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a href="ajouter-equipement.html">
+                                <i class="fa-solid fa-plus"></i> Ajouter
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+        
+                <li class="menu-item active-menu">
+                    <a href="#">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Utilisateurs</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+        
+                    <ul class="submenu">
+                        <li>
+                            <a href="listeuser.html" class="active">
+                                <i class="fa-solid fa-list"></i> Liste
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a href="utilisateur.html">
+                                <i class="fa-solid fa-plus"></i> Ajouter
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+        
+                
+        
+                <li class="menu-item">
+                    <a href="#">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <span>Interventions</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+        
+                    <ul class="submenu">
+                        <li>
+                            <a href="intervliste.html">
+                                <i class="fa-solid fa-list"></i> Liste
+                            </a>
+                        </li>
+        
+                        <li>
+                            <a href="intervajout.html">
+                                <i class="fa-solid fa-plus"></i> Ajouter
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+        
+            </ul>
+        
+            <div class="logout-container">
+                <a href="#" id="btnDeconnexion">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Déconnexion</span>
+                </a>
+            </div>
+        
+        </aside>
+        <main class="main-content">
+        
+            <section class="welcome">
+                <h1>Liste des utilisateurs</h1>
+                <p>Consultez et gérez les utilisateurs du département informatique.</p>
+            </section>
+        
+            <div class="table-card">
+        
+                <div class="table-header">
+                    <div class="table-actions">
+        
+                        <select id="filterDepartement">
+                            <option value="">Tous les départements</option>
+                            <option>Informatique</option>
+                            <option>RH</option>
+                            <option>Comptabilité</option>
+                            <option>Commercial</option>
+                        </select>
+        
+                        <select id="filterStatut">
+                            <option value="">Tous les statuts</option>
+                            <option>Actif</option>
+                            <option>Congé</option>
+                            <option>Inactif</option>
+                        </select>
+        
+                        <a href="utilisateur.html" class="add-btn">
+                            <i class="fa-solid fa-user-plus"></i>
+                            Ajouter un utilisateur
+                        </a>
+        
+                    </div>
+        
+                </div>
+        
+                <table>
+        
+                    <thead>
+        
+                        <tr>
+        
+                            <th>Matricule</th>
+                            <th>Nom</th>
+                            <th>Prénom</th>
+                            <th>Département</th>
+                            <th>Poste</th>
+                            <th>Email</th>
+                            <th>Téléphone</th>
+                            <th>Statut</th>
+                            <th>Équipements</th>
+                            <th>Actions</th>
+        
+                        </tr>
+        
+                    </thead>
+        
+                    <tbody id="usersTable">
+        
+                        <!-- Les utilisateurs seront ajoutés automatiquement -->
+        
+                    </tbody>
+        
+                </table>
+        
+                <div id="emptyMessage" class="empty">
+        
+                    <i class="fa-solid fa-users"></i>
+        
+                    <h3>Aucun utilisateur enregistré</h3>
+        
+                    <p>Ajoutez votre premier utilisateur.</p>
+        
+                </div>
+        
+            </div>
+        
+        </main>
+
+    </div>
+    <script src="script.js"></script>
+    <script src="protection.js"></script>
+    <script src="utilisateur.js"></script>
+</body>
+
+</html>

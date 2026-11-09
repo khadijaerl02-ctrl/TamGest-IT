@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <title>Ajouter un logiciel</title>
+    <link rel="icon" type="image/png" href="logo_TamGestIT.png">
+</head>
+
+<body>
+
+    <div class="content">
+
+        <div id="sidebar-container"></div>
+
+        <main class="main-content">
+
+            <div class="form-card">
+
+                <div class="form-header">
+
+                    <h2>
+                        <i class="fa-solid fa-laptop-code"></i>
+                        Ajouter un logiciel
+                    </h2>
+
+                    <p>Enregistrez un nouveau logiciel et sa licence.</p>
+
+                </div>
+
+                <form id="logicielForm">
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="nom">Nom du logiciel</label>
+                            <input type="text" id="nom" placeholder="Ex : Kaspersky">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="version">Version</label>
+                            <input type="text" id="version" placeholder="Ex : Endpoint Security">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="categorie">Catégorie</label>
+                            <select id="categorie">
+                                <option>Antivirus</option>
+                                <option>Bureautique</option>
+                                <option>Gestion</option>
+                                <option>Réseau</option>
+                                <option>Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="editeur">Éditeur</label>
+                            <input type="text" id="editeur" placeholder="Ex : Kaspersky">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="typeLicence">Type de licence</label>
+                            <select id="typeLicence">
+                                <option>Gratuite</option>
+                                <option>Payante</option>
+                                <option>Abonnement</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nombreLicences">Nombre de licences</label>
+                            <input type="number" id="nombreLicences" min="1" value="1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dateAchat">Date d'achat</label>
+                            <input type="date" id="dateAchat">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dateExpiration">Date d'expiration</label>
+                            <input type="date" id="dateExpiration">
+                        </div>
+
+                    </div>
+
+                    <div class="buttons">
+
+                        <button type="reset" class="cancel">
+                            Annuler
+                        </button>
+
+                        <button type="submit" class="save">
+                            <i class="fa-solid fa-floppy-disk"></i>
+                            Enregistrer
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="sidebar.js"></script>
+    <script src="script.js"></script>
+    <script src="logiciels.js"></script>
+    <script src="protection.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Listes des équipements</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+</head>
+
+<body>
+    <div class="content">
+            <aside class="sidebar">
+            
+                <div class="logo">
+                    <img src="logo_TamGestIT.png" alt="TamGest Logo">
+                    <h2>TamGest IT</h2>
+                </div>
+            
+                <ul class="menu">
+            
+                    <li>
+                        <a href="index.html">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span>Tableau de Bord</span>
+                        </a>
+                    </li>
+            
+                    <li class="menu-item active-menu">
+                        <a href="#">
+                            <i class="fa-solid fa-desktop"></i>
+                            <span>Équipements</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+            
+                        <ul class="submenu">
+                            <li>
+                                <a href="equipement.html" class="active">
+                                    <i class="fa-solid fa-list"></i> Liste
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="ajouter-equipement.html">
+                                    <i class="fa-solid fa-plus"></i> Ajouter
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+            
+                    <li class="menu-item">
+                        <a href="#">
+                            <i class="fa-solid fa-users"></i>
+                            <span>Utilisateurs</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+            
+                        <ul class="submenu">
+                            <li>
+                                <a href="listeuser.html">
+                                    <i class="fa-solid fa-list"></i> Liste
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="utilisateur.html">
+                                    <i class="fa-solid fa-plus"></i> Ajouter
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="menu-item">
+                        <a href="#">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <span>Interventions</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+            
+                        <ul class="submenu">
+                            <li>
+                                <a href="intervliste.html">
+                                    <i class="fa-solid fa-list"></i> Liste
+                                </a>
+                            </li>
+            
+                            <li>
+                                <a href="intervajout.html">
+                                    <i class="fa-solid fa-plus"></i> Ajouter
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+            
+                </ul>
+            
+                <div class="logout-container">
+                    <a href="#" id="btnDeconnexion">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Déconnexion</span>
+                    </a>
+                </div>
+            
+            </aside>
+        
+
+        <main class="main-content">
+
+            <section class="welcome">
+                <h1>Liste des équipements</h1>
+                <p>Consultez et gérez les équipements informatiques.</p>
+            </section>
+
+            <div class="table-card">
+
+                <div class="table-header">
+
+                    <div class="table-actions">
+
+                        <select id="filterType">
+                            <option value="">Tous les types</option>
+                            <option>PC Portable</option>
+                            <option>PC Bureau</option>
+                            <option>Imprimante</option>
+                            <option>Écran</option>
+                            <option>Switch</option>
+                            <option>Routeur</option>
+                        </select>
+
+                        <select id="filterEtat">
+                            <option value="">Tous les états</option>
+                            <option>En service</option>
+                            <option>Maintenance</option>
+                            <option>En panne</option>
+                        </select>
+
+                        <a href="ajouter-equipement.html" class="add-btn">
+                            <i class="fa-solid fa-plus"></i>
+                            Ajouter un équipement
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Nom</th>
+                            <th>Type</th>
+                            <th>Marque</th>
+                            <th>Département</th>
+                            <th>Utilisateur</th>
+                            <th>État</th>
+                            <th>N° de série</th>
+                            <th>Anty Virus</th>
+                            <th>Domaine</th>
+                            <th>WIFI</th>
+                            <th>Date d'acha</th>
+                            <th>Actions</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="equipementsTable">
+
+
+
+                    </tbody>
+
+                </table>
+
+                <div id="emptyMessage" class="empty">
+
+                    <i class="fa-solid fa-box-open"></i>
+
+                    <h3>Aucun équipement enregistré</h3>
+
+                    <p>Ajoutez votre premier équipement pour commencer.</p>
+
+                </div>
+
+            </div>
+
+        </main>
+
+
+    </div>
+    <script src="script.js"></script>
+    <script src="equipement.js"></script>
+    <script src="protection.js"></script>
+</body>
+
+</html>

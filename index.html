@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tableau de Bord</title>
+    <link rel="icon" type="image/png" href="logo_TamGestIT.png">
+    <link rel="icon" type="image/png" href="logo_TamGestIT.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+</head>
+<body>
+    <div class="content">
+    <aside class="sidebar">
+    
+        <div class="logo">
+            <img src="logo_TamGestIT.png" alt="TamGest Logo">
+            <h2>TamGest IT</h2>
+        </div>
+    
+        <ul class="menu">
+    
+            <li>
+                <a href="index.html" class="active">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Tableau de Bord</span>
+                </a>
+            </li>
+    
+            <li class="menu-item">
+                <a href="#">
+                    <i class="fa-solid fa-desktop"></i>
+                    <span>Équipements</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+    
+                <ul class="submenu">
+                    <li>
+                        <a href="equipement.html">
+                            <i class="fa-solid fa-list"></i> Liste
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="ajouter-equipement.html">
+                            <i class="fa-solid fa-plus"></i> Ajouter
+                        </a>
+                    </li>
+                </ul>
+            </li>
+    
+            <li class="menu-item">
+                <a href="#">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Utilisateurs</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+    
+                <ul class="submenu">
+                    <li>
+                        <a href="listeuser.html">
+                            <i class="fa-solid fa-list"></i> Liste
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="utilisateur.html">
+                            <i class="fa-solid fa-plus"></i> Ajouter
+                        </a>
+                    </li>
+                </ul>
+            <li class="menu-item">
+                <a href="#">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <span>Interventions</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+    
+                <ul class="submenu">
+                    <li>
+                        <a href="intervliste.html">
+                            <i class="fa-solid fa-list"></i> Liste
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="intervajout.html">
+                            <i class="fa-solid fa-plus"></i> Ajouter
+                        </a>
+                    </li>
+                </ul>
+            </li>
+    
+        </ul>
+    
+        <div class="logout-container">
+            <a href="#" id="btnDeconnexion">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Déconnexion</span>
+            </a>
+        </div>
+    
+    </aside>
+
+        <main class="main-content">
+            <section class="welcome">
+            
+                
+                <div class="welcome-header">
+                    <h1>Bienvenue dans TamGest IT</h1>
+            
+                    <div class="welcome-actions">
+            
+                        <a href="logicielajout.html" class="welcome-btn" title="Créer un logiciel" aria-label="Créer un logiciel">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                        <!-- Liste des logiciels --> 
+                        <a href="logicieliste.html" class="welcome-btn" title="Liste des logiciels" aria-label="Liste des logiciels">
+                            <i class="fa-solid fa-list-check"></i> 
+                        </a>
+            
+                        
+                    </div>
+                </div>
+            
+                <p>
+                    Solution de gestion du département informatique :
+                    équipements, utilisateurs, interventions et logiciels.
+                </p>
+                
+            
+            </section>
+            
+
+                <div class="cards">
+                
+                    <div class="card">
+                        <div class="icon equipement">
+                            <i class="fa-solid fa-desktop"></i>
+                        </div>
+                
+                        <div class="card-info">
+                            <h3>Équipements</h3>
+                            <h2 id="equipementsCount">0</h2>
+
+                            
+                        </div>
+                    </div>
+                
+                
+                    <div class="card">
+                        <div class="icon intervention">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                
+                        <div class="card-info">
+                            <h3>Interventions</h3>
+                            <h2 id="interventionsCount">0</h2>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="card">
+                        <div class="icon tache">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                        </div>
+                
+                        <div class="card-info">
+                            <h3>Logiciels</h3>
+                            <h2 id="logicielsCount">0</h2>
+                            
+                        </div>
+                    </div>
+                
+                </div>
+
+        </main>
+    </div>
+    <script src="script.js"></script>
+    <script src="protection.js"></script>
+</body>
+</html>
